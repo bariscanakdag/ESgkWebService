@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ESgk.WorkIn.ContractTypes;
 using ESgk.WorkIn.Interfaces;
 using ESgk.WorkIn.Model;
-using ESgk.WorkIn.SgkService;
+using ESgk.WorkIn.tr.gov.sgk.sgkt;
+using kullaniciBilgileri = ESgk.WorkIn.tr.gov.sgk.sgkt.kullaniciBilgileri;
+using tcKimliktenIseGirisSorParametre = ESgk.WorkIn.tr.gov.sgk.sgkt.tcKimliktenIseGirisSorParametre;
+
 
 namespace ESgk.WorkIn.Services
 {
@@ -14,27 +18,27 @@ namespace ESgk.WorkIn.Services
         public string GetWorkInStatus(WorkInQueriesModel workInQueriesModel)
         {
 
-            tckimlikNoileiseGirisSorgulaRequest
-                tckimlikNoileiseGirisSorgula = new tckimlikNoileiseGirisSorgulaRequest();
-            tckimlikNoileiseGirisSorgula.tcKimliktenIseGirisSorParametre = new tcKimliktenIseGirisSorParametre();
-            tckimlikNoileiseGirisSorgula.tcKimliktenIseGirisSorParametre.kullaniciBilgileri = new kullaniciBilgileri();
+            tcKimliktenIseGirisSorParametre
+                tckimlikNoileiseGirisSorgula = new tcKimliktenIseGirisSorParametre();
+            tckimlikNoileiseGirisSorgula.kullaniciBilgileri =new kullaniciBilgileri();
+            
 
-            tckimlikNoileiseGirisSorgula.tcKimliktenIseGirisSorParametre.kullaniciBilgileri.kullaniciAdi =
+            tckimlikNoileiseGirisSorgula.kullaniciBilgileri.kullaniciAdi =
                 workInQueriesModel.kullaniciAdi;
-            tckimlikNoileiseGirisSorgula.tcKimliktenIseGirisSorParametre.kullaniciBilgileri.isyeriKodu =
+            tckimlikNoileiseGirisSorgula.kullaniciBilgileri.isyeriKodu =
                 workInQueriesModel.kullaniciAdi;
-            tckimlikNoileiseGirisSorgula.tcKimliktenIseGirisSorParametre.kullaniciBilgileri.isyeriSicil =
+            tckimlikNoileiseGirisSorgula.kullaniciBilgileri.isyeriSicil =
                 workInQueriesModel.isyeriSicil;
-            tckimlikNoileiseGirisSorgula.tcKimliktenIseGirisSorParametre.kullaniciBilgileri.isyeriSifre =
+            tckimlikNoileiseGirisSorgula.kullaniciBilgileri.isyeriSifre =
                 workInQueriesModel.isyeriSifre;
-            tckimlikNoileiseGirisSorgula.tcKimliktenIseGirisSorParametre.kullaniciBilgileri.sistemSifre =
+            tckimlikNoileiseGirisSorgula.kullaniciBilgileri.sistemSifre =
                 workInQueriesModel.sistemSifre;
-            tckimlikNoileiseGirisSorgula.tcKimliktenIseGirisSorParametre.tcKimlikNo = workInQueriesModel.tcKimlikNo;
+            tckimlikNoileiseGirisSorgula.tcKimlikNo = workInQueriesModel.tcKimlikNo;
 
-            WS_SgkIseGiris iseGiris = new WS_SgkIseGirisClient();
+            WS_SgkIseGirisService iseGiris = new WS_SgkIseGirisService();
             var response = iseGiris.tckimlikNoileiseGirisSorgula(tckimlikNoileiseGirisSorgula);
 
-
+            iseGiris.tckimlikNoileiseGirisSorgula(tckimlikNoileiseGirisSorgula);
 
 
 

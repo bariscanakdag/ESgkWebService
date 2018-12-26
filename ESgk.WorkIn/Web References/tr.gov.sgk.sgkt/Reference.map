@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DiscoveryClientResultsFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Results>
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.SchemaReference" url="https://sgkt.sgk.gov.tr/WS_SgkTescil4a/WS_SgkIseGirisService?WSDL&amp;type=XSD&amp;file=https:%2F%2Ftestgrp1.sgk.intra%2FWS_SgkTescil4a%2FWS_SgkIseGirisService%2FWSSgkIseGirisService_schema1.xsd" filename="WS_SgkIseGirisService.xsd" />
+    <DiscoveryClientResult referenceType="System.Web.Services.Discovery.ContractReference" url="https://sgkt.sgk.gov.tr/WS_SgkTescil4a/WS_SgkIseGirisService?wsdl" filename="WS_SgkIseGirisService.wsdl" />
+  </Results>
+</DiscoveryClientResultsFile>

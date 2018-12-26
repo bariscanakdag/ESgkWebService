@@ -38,69 +38,72 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\SgkService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Interfaces\IWorkInService.cs" />
     <Compile Include="Model\WorkInQueriesModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Services\WorkInService.cs" />
+    <Compile Include="Web References\tr.gov.sgk.sgkt\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Connected Services\SgkService\ESgk.WorkIn.SgkService.iseGirisKaydetResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\SgkService\ESgk.WorkIn.SgkService.iseGirisListesi.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\tr.gov.sgk.sgkt\iseGirisListesi.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\SgkService\ESgk.WorkIn.SgkService.iseGirisPdfDokumResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\tr.gov.sgk.sgkt\pdfDokumSonuc.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\SgkService\ESgk.WorkIn.SgkService.pdfDokumSonuc.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\tr.gov.sgk.sgkt\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <None Include="Connected Services\SgkService\ESgk.WorkIn.SgkService.sigortaliIseGirisIslemSonuclari.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
+    <None Include="Web References\tr.gov.sgk.sgkt\sigortaliIseGirisIslemSonuclari.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
-    <None Include="Connected Services\SgkService\ESgk.WorkIn.SgkService.tckimlikNoileiseGirisSorgulaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\SgkService\ESgk.WorkIn.SgkService.tckimlikNoTarihileiseGirisSorgulaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\SgkService\WS_SgkIseGirisService.wsdl" />
-    <None Include="Connected Services\SgkService\WS_SgkIseGirisService.xsd">
+    <None Include="Web References\tr.gov.sgk.sgkt\WS_SgkIseGirisService.wsdl" />
+    <None Include="Web References\tr.gov.sgk.sgkt\WS_SgkIseGirisService.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\SgkService\" />
+    <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\SgkService\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\SgkService\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\SgkService\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
+    <WebReferenceUrl Include="https://sgkt.sgk.gov.tr/WS_SgkTescil4a/WS_SgkIseGirisService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\tr.gov.sgk.sgkt\</RelPath>
+      <UpdateFromURL>https://sgkt.sgk.gov.tr/WS_SgkTescil4a/WS_SgkIseGirisService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>ESgk_WorkIn_tr_gov_sgk_sgkt_WS_SgkIseGirisService</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

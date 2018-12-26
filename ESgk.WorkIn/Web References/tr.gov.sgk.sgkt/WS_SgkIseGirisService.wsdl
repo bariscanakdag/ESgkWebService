@@ -2,7 +2,7 @@
 <definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://servisler.ws.tescil4a.isegiris.sgk.gov.tr" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="WS_SgkIseGirisService" targetNamespace="http://servisler.ws.tescil4a.isegiris.sgk.gov.tr" xmlns="http://schemas.xmlsoap.org/wsdl/">
   <types>
     <xsd:schema>
-      <xsd:import schemaLocation="http://uyg.sgk.gov.tr/WS_SgkTescil4a/WS_SgkIseGirisService?WSDL&amp;type=XSD&amp;file=https%3A%2F%2Ftestgrp1.sgk.intra%2FWS_SgkTescil4a%2FWS_SgkIseGirisService%2FWSSgkIseGirisService_schema1.xsd" namespace="http://servisler.ws.tescil4a.isegiris.sgk.gov.tr" />
+      <xsd:import schemaLocation="https://sgkt.sgk.gov.tr/WS_SgkTescil4a/WS_SgkIseGirisService?WSDL&amp;type=XSD&amp;file=https%3A%2F%2Ftestgrp1.sgk.intra%2FWS_SgkTescil4a%2FWS_SgkIseGirisService%2FWSSgkIseGirisService_schema1.xsd" namespace="http://servisler.ws.tescil4a.isegiris.sgk.gov.tr" />
     </xsd:schema>
   </types>
   <message name="iseGirisKaydet">
@@ -88,7 +88,7 @@
   </binding>
   <service name="WS_SgkIseGirisService">
     <port name="WS_SgkIseGirisPort" binding="tns:WS_SgkIseGirisPortBinding">
-      <soap:address location="http://uyg.sgk.gov.tr/WS_SgkTescil4a/WS_SgkIseGirisService" />
+      <soap:address location="https://sgkt.sgk.gov.tr/WS_SgkTescil4a/WS_SgkIseGirisService" />
     </port>
   </service>
 </definitions>
