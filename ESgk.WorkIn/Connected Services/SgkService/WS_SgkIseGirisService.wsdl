@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://servisler.ws.tescil4a.isegiris.sgk.gov.tr" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="WS_SgkIseGirisService" targetNamespace="http://servisler.ws.tescil4a.isegiris.sgk.gov.tr" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://uyg.sgk.gov.tr/WS_SgkTescil4a/WS_SgkIseGirisService?WSDL&amp;type=XSD&amp;file=https%3A%2F%2Ftestgrp1.sgk.intra%2FWS_SgkTescil4a%2FWS_SgkIseGirisService%2FWSSgkIseGirisService_schema1.xsd" namespace="http://servisler.ws.tescil4a.isegiris.sgk.gov.tr" />
+    </xsd:schema>
+  </types>
+  <message name="iseGirisKaydet">
+    <part name="parameters" element="tns:iseGirisKaydet" />
+  </message>
+  <message name="tckimlikNoileiseGirisSorgula">
+    <part name="parameters" element="tns:tckimlikNoileiseGirisSorgula" />
+  </message>
+  <message name="tckimlikNoileiseGirisSorgulaResponse">
+    <part name="parameters" element="tns:tckimlikNoileiseGirisSorgulaResponse" />
+  </message>
+  <message name="iseGirisPdfDokum">
+    <part name="parameters" element="tns:iseGirisPdfDokum" />
+  </message>
+  <message name="iseGirisPdfDokumResponse">
+    <part name="parameters" element="tns:iseGirisPdfDokumResponse" />
+  </message>
+  <message name="tckimlikNoTarihileiseGirisSorgula">
+    <part name="parameters" element="tns:tckimlikNoTarihileiseGirisSorgula" />
+  </message>
+  <message name="tckimlikNoTarihileiseGirisSorgulaResponse">
+    <part name="parameters" element="tns:tckimlikNoTarihileiseGirisSorgulaResponse" />
+  </message>
+  <message name="iseGirisKaydetResponse">
+    <part name="parameters" element="tns:iseGirisKaydetResponse" />
+  </message>
+  <portType name="WS_SgkIseGiris">
+    <operation name="iseGirisKaydet">
+      <input wsam:Action="iseGirisKaydet" message="tns:iseGirisKaydet" />
+      <output wsam:Action="http://servisler.ws.tescil4a.isegiris.sgk.gov.tr/WS_SgkIseGiris/iseGirisKaydetResponse" message="tns:iseGirisKaydetResponse" />
+    </operation>
+    <operation name="tckimlikNoTarihileiseGirisSorgula">
+      <input wsam:Action="tckimlikNoTarihileiseGirisSorgula" message="tns:tckimlikNoTarihileiseGirisSorgula" />
+      <output wsam:Action="http://servisler.ws.tescil4a.isegiris.sgk.gov.tr/WS_SgkIseGiris/tckimlikNoTarihileiseGirisSorgulaResponse" message="tns:tckimlikNoTarihileiseGirisSorgulaResponse" />
+    </operation>
+    <operation name="tckimlikNoileiseGirisSorgula">
+      <input wsam:Action="tckimlikNoileiseGirisSorgula" message="tns:tckimlikNoileiseGirisSorgula" />
+      <output wsam:Action="http://servisler.ws.tescil4a.isegiris.sgk.gov.tr/WS_SgkIseGiris/tckimlikNoileiseGirisSorgulaResponse" message="tns:tckimlikNoileiseGirisSorgulaResponse" />
+    </operation>
+    <operation name="iseGirisPdfDokum">
+      <input wsam:Action="iseGirisPdfDokum" message="tns:iseGirisPdfDokum" />
+      <output wsam:Action="http://servisler.ws.tescil4a.isegiris.sgk.gov.tr/WS_SgkIseGiris/iseGirisPdfDokumResponse" message="tns:iseGirisPdfDokumResponse" />
+    </operation>
+  </portType>
+  <binding name="WS_SgkIseGirisPortBinding" type="tns:WS_SgkIseGiris">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="iseGirisKaydet">
+      <soap:operation soapAction="iseGirisKaydet" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="tckimlikNoTarihileiseGirisSorgula">
+      <soap:operation soapAction="tckimlikNoTarihileiseGirisSorgula" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="tckimlikNoileiseGirisSorgula">
+      <soap:operation soapAction="tckimlikNoileiseGirisSorgula" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="iseGirisPdfDokum">
+      <soap:operation soapAction="iseGirisPdfDokum" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="WS_SgkIseGirisService">
+    <port name="WS_SgkIseGirisPort" binding="tns:WS_SgkIseGirisPortBinding">
+      <soap:address location="http://uyg.sgk.gov.tr/WS_SgkTescil4a/WS_SgkIseGirisService" />
+    </port>
+  </service>
+</definitions>
