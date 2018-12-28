@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using ESgk.WorkIn.ContractTypes;
@@ -34,11 +35,13 @@ namespace ESgk.WorkIn.Services
             tckimlikNoileiseGirisSorgula.kullaniciBilgileri.sistemSifre =
                 workInQueriesModel.sistemSifre;
             tckimlikNoileiseGirisSorgula.tcKimlikNo = workInQueriesModel.tcKimlikNo;
-
+           ServicePointManager.Expect100Continue = true;
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             WS_SgkIseGirisService iseGiris = new WS_SgkIseGirisService();
+            
             var response = iseGiris.tckimlikNoileiseGirisSorgula(tckimlikNoileiseGirisSorgula);
 
-            iseGiris.tckimlikNoileiseGirisSorgula(tckimlikNoileiseGirisSorgula);
+           
 
 
 

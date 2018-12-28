@@ -26,7 +26,7 @@ namespace ESgk.WorkIn.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://sgkt.sgk.gov.tr/WS_SgkTescil4a/WS_SgkIseGirisService")]
+        [global::System.Configuration.DefaultSettingValueAttribute("https://sgkt.sgk.gov.tr/WS_SgkTescil4a/WS_SgkIseGirisService")]
         public string ESgk_WorkIn_tr_gov_sgk_sgkt_WS_SgkIseGirisService {
             get {
                 return ((string)(this["ESgk_WorkIn_tr_gov_sgk_sgkt_WS_SgkIseGirisService"]));

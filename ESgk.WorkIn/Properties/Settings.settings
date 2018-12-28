@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="ESgk_WorkIn_tr_gov_sgk_sgkt_WS_SgkIseGirisService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://sgkt.sgk.gov.tr/WS_SgkTescil4a/WS_SgkIseGirisService</Value>
+      <Value Profile="(Default)">https://sgkt.sgk.gov.tr/WS_SgkTescil4a/WS_SgkIseGirisService</Value>
     </Setting>
   </Settings>
 </SettingsFile>
